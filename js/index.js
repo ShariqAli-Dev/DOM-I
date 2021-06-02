@@ -37,7 +37,8 @@ const siteContent = {
   },
 };
 
-// ### Changing The Nav Bar ### //
+
+// ### Changing Nav Bar ### //
 let logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent['nav']['img-src'];
 
@@ -51,7 +52,7 @@ navBarAnchors[4].textContent = siteContent['nav']['nav-item-5'];
 navBarAnchors[5].textContent = siteContent['nav']['nav-item-6'];
 
 
-// ### Changing The CTA Section ### //
+// ### Changing CTA Section ### //
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent['cta']['h1'];
 
@@ -60,3 +61,43 @@ ctaButton.textContent = siteContent['cta']['button'];
 
 const ctaImg = document.querySelector('.cta img');
 ctaImg.src = siteContent['cta']['img-src'];
+
+
+// ### Changing Main Section ### //
+//Converting MCTextContent into an array. Referencing the index per subsection of content
+const mainContentTextDivs = document.querySelectorAll('.main-content .text-content');
+const mcTextDivsArray = Array.from(mainContentTextDivs);
+
+// Features Subsection
+const featuresH4 = mcTextDivsArray[0].querySelector('h4');
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+const featuresP = mcTextDivsArray[0].querySelector('p');
+featuresP.textContent = siteContent['main-content']['features-content'];
+
+// About Subsection
+const aboutH4 = mcTextDivsArray[1].querySelector('h4');
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+const aboutP = mcTextDivsArray[1].querySelector('p');
+aboutP.textContent = siteContent['main-content']['about-content'];
+
+// Setting Main-Content Image
+const mainContentImage = document.querySelector('.middle-img');
+mainContentImage.src = siteContent['main-content']['middle-img-src'];
+
+// Services Subsection
+const servicesH4 = mcTextDivsArray[2].querySelector('h4');
+servicesH4.textContent = siteContent['main-content']['services-h4'];
+const servicesP = mcTextDivsArray[2].querySelector('p');
+servicesP.textContent = siteContent['main-content']['services-content'];
+
+// Product Subsection
+const productH4 = mcTextDivsArray[3].querySelector('h4');
+productH4.textContent = siteContent['main-content']['product-h4'];
+const productP = mcTextDivsArray[3].querySelector('p');
+productP.textContent = siteContent['main-content']['product-content'];
+
+// vision Subsection
+const visionH4 = mcTextDivsArray[4].querySelector('h4');
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+const visionP = mcTextDivsArray[4].querySelector('p');
+visionP.textContent = siteContent['main-content']['vision-content'];
