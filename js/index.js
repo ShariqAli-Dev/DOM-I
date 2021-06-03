@@ -37,7 +37,6 @@ const siteContent = {
   },
 };
 
-
 // ### Changing Nav Bar ### //
 let logoImg = document.querySelector('#logo-img');
 logoImg.src = siteContent['nav']['img-src'];
@@ -113,3 +112,23 @@ contactPArray[0].textContent = siteContent['contact']['address'];
 contactPArray[1].textContent = siteContent['contact']['phone'];
 contactPArray[2].textContent = siteContent['contact']['email'];
 
+
+// ### Changing Footer Section ### //
+const footerP = document.querySelector('footer p');
+footerP.textContent = siteContent['footer']['copyright']; 
+
+
+// ### Creating New Elements ### //
+// CHANGING TEXT COLOR TO GREEN
+console.log(navBarAnchors);
+navBarAnchors.forEach(a => a.style.color = 'green')
+
+// Creating the new element
+const newNavAnchor = document.createElement('a');
+newNavAnchor.textContent = 'Location';
+newNavAnchor.href = '#';
+newNavAnchor.style.color = 'green'; // CHANGING TEXT COLOR TO GREEN
+
+// formatting nav to append new anchor tag into
+const nav = document.querySelector('nav');
+nav.appendChild(newNavAnchor);
