@@ -53,6 +53,7 @@ navBarAnchors[5].textContent = siteContent['nav']['nav-item-6'];
 
 // ### Changing CTA Section ### //
 const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.style.wordSpacing = '100vw';
 ctaH1.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta-text button');
