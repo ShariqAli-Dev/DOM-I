@@ -101,3 +101,15 @@ const visionH4 = mcTextDivsArray[4].querySelector('h4');
 visionH4.textContent = siteContent['main-content']['vision-h4'];
 const visionP = mcTextDivsArray[4].querySelector('p');
 visionP.textContent = siteContent['main-content']['vision-content'];
+
+
+// ### Changing Contact Section ### //
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent['contact']['contact-h4'];
+
+const contactP = document.querySelectorAll('.contact p');
+const contactPArray = Array.from(contactP);
+contactPArray[0].textContent = siteContent['contact']['address'];
+contactPArray[1].textContent = siteContent['contact']['phone'];
+contactPArray[2].textContent = siteContent['contact']['email'];
+
